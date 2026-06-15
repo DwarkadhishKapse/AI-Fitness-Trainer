@@ -178,9 +178,9 @@ npm run client
 
 ## Screenshots
 
-<img width="1920" height="871" alt="Screenshot (127)" src="https://github.com/user-attachments/assets/c47972bb-c7b1-4252-b947-e8d318529ba2" />
+<img width="1920" height="1080" alt="Screenshot (157)" src="https://github.com/user-attachments/assets/4058ac32-0284-42b5-a444-151092223d28" />
 
-<img width="1920" height="865" alt="Screenshot (128)" src="https://github.com/user-attachments/assets/3f3b2308-93cc-46ab-93b8-3d8b145b659d" />
+<img width="1920" height="1080" alt="Screenshot (158)" src="https://github.com/user-attachments/assets/1cd9e589-e37b-4deb-914c-ba32f0a1c163" />
 
 <img width="1920" height="863" alt="Screenshot (129)" src="https://github.com/user-attachments/assets/34e66519-b66a-44b1-b993-26d8f6ed4354" />
 
