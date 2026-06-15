@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Dumbbell, Activity, Timer, Star } from "lucide-react";
 import api from "../services/api";
 import DashboardStatCard from "../components/dashboard/DashboardStatCard";
 import WeeklyProgressChart from "../components/dashboard/WeeklyProgressChart";
@@ -63,7 +64,6 @@ const Dashboard = () => {
 
   return (
     <section className="space-y-8">
-      {/* Header */}
       <div>
         <p className="text-sm font-semibold uppercase tracking-wider text-cyan-400">
           FITNESS OVERVIEW
@@ -76,30 +76,29 @@ const Dashboard = () => {
         </p>
       </div>
 
-      {/* Statistics Cards */}
       <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
         <DashboardStatCard
           title="Total Workouts"
           value={stats.totalWorkouts}
-          icon="🏋️"
+          icon={<Dumbbell size={22} className="text-cyan-400" />}
         />
 
         <DashboardStatCard
           title="Total Reps"
           value={stats.totalReps}
-          icon="💪"
+          icon={<Activity size={22} className="text-cyan-400" />}
         />
 
         <DashboardStatCard
           title="Plank Time"
           value={`${stats.totalPlankTime}s`}
-          icon="⏱️"
+          icon={<Timer size={22} className="text-cyan-400" />}
         />
 
         <DashboardStatCard
           title="Favorite Exercise"
           value={stats.favoriteExercise}
-          icon="⭐"
+          icon={<Star size={22} className="text-cyan-400" />}
         />
       </div>
 
@@ -107,7 +106,7 @@ const Dashboard = () => {
 
       <ExerciseDistributionChart data={exerciseDistribution} />
 
-      <PersonalRecords records={personalRecords}/>
+      <PersonalRecords records={personalRecords} />
 
       <section className="rounded-3xl border border-cyan-900/30 bg-slate-900/70 p-6 backdrop-blur-sm">
         <div className="mb-6">
@@ -148,9 +147,11 @@ const Dashboard = () => {
               >
                 <div className="flex items-center justify-between">
                   <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-500/10">
-                    <span className="text-lg">
-                      {session.metricType === "reps" ? "💪" : "⏱️"}
-                    </span>
+                    {session.metricType === "reps" ? (
+                      <Activity size={20} className="text-cyan-400" />
+                    ) : (
+                      <Timer size={20} className="text-cyan-400" />
+                    )}
                   </div>
 
                   <span className="rounded-full bg-cyan-500/10 px-3 py-1 text-xs font-semibold text-cyan-400">

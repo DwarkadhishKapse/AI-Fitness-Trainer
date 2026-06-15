@@ -30,9 +30,6 @@ const Home = () => {
     <main className="min-h-screen bg-slate-950 text-slate-100">
       <section className="mx-auto grid min-h-screen max-w-6xl items-center gap-12 px-6 py-12 lg:grid-cols-[1.1fr_0.9fr]">
         <div>
-          <p className="mb-5 inline-flex rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-2 text-sm font-medium text-cyan-200">
-            MERN + MediaPipe Pose
-          </p>
           <h1 className="max-w-3xl text-4xl font-bold tracking-tight text-white sm:text-6xl">
             Your personal AI fitness trainer for smarter home workouts.
           </h1>

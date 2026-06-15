@@ -1,4 +1,4 @@
-import React from 'react'
+import { Activity, Timer } from "lucide-react";
 
 const PersonalRecords = ({ records }) => {
   return (
@@ -35,7 +35,7 @@ const PersonalRecords = ({ records }) => {
               Best Push Ups
             </h3>
 
-            <span className="text-xl">💪</span>
+            <Activity size={22} className="text-cyan-400" />
           </div>
 
           <p className="mt-4 text-4xl font-bold text-cyan-400">
@@ -64,7 +64,7 @@ const PersonalRecords = ({ records }) => {
               Longest Plank
             </h3>
 
-            <span className="text-xl">⏱️</span>
+            <Timer size={22} className="text-cyan-400" />
           </div>
 
           <p className="mt-4 text-4xl font-bold text-cyan-400">
@@ -80,4 +80,4 @@ const PersonalRecords = ({ records }) => {
   );
 };
 
-export default PersonalRecords
+export default PersonalRecords;

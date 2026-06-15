@@ -50,8 +50,9 @@ const AddMealForm = ({ fetchMeals }) => {
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-5">
+      <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid gap-5 md:grid-cols-2">
+          {/* Meal Name */}
           <div>
             <label className="mb-2 block text-sm font-medium text-slate-300">
               Meal Name
@@ -65,50 +66,64 @@ const AddMealForm = ({ fetchMeals }) => {
               placeholder="e.g. Boiled Eggs"
               required
               className="
-              w-full
-              rounded-xl
-              border border-slate-700
-              bg-slate-950/50
-              px-4 py-3
-              text-white
-              placeholder:text-slate-500
-              outline-none
-              transition-all
-              focus:border-cyan-500
-            "
+          w-full
+          rounded-2xl
+          border border-slate-700
+          bg-slate-950/50
+          px-4 py-3
+          text-white
+          placeholder:text-slate-500
+          outline-none
+          transition-all duration-200
+          hover:border-cyan-400
+          focus:border-cyan-500
+          focus:ring-2 focus:ring-cyan-500/20
+        "
             />
           </div>
 
+          {/* Meal Type */}
           <div>
             <label className="mb-2 block text-sm font-medium text-slate-300">
               Meal Type
             </label>
 
-            <select
-              name="mealType"
-              value={formData.mealType}
-              onChange={handleChange}
-              className="
-              w-full
-              rounded-xl
-              border border-slate-700
-              bg-slate-950/50
-              px-4 py-3
-              text-white
-              outline-none
-              transition-all
-              focus:border-cyan-500
-            "
-            >
-              <option value="Breakfast">Breakfast</option>
-              <option value="Lunch">Lunch</option>
-              <option value="Dinner">Dinner</option>
-              <option value="Snack">Snack</option>
-            </select>
+            <div className="relative">
+              <select
+                name="mealType"
+                value={formData.mealType}
+                onChange={handleChange}
+                className="
+            w-full
+            appearance-none
+            rounded-2xl
+            border border-slate-700
+            bg-slate-950/50
+            px-4 py-3
+            pr-12
+            text-white
+            outline-none
+            transition-all duration-200
+            hover:border-cyan-400
+            focus:border-cyan-500
+            focus:ring-2 focus:ring-cyan-500/20
+          "
+              >
+                <option value="Breakfast">Breakfast</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Dinner">Dinner</option>
+                <option value="Snack">Snack</option>
+              </select>
+
+              <div className="pointer-events-none absolute inset-y-0 right-4 flex items-center text-cyan-400">
+                ▼
+              </div>
+            </div>
           </div>
         </div>
 
         <div className="grid gap-5 md:grid-cols-4">
+          {/* Calories */}
           <div>
             <label className="mb-2 block text-sm font-medium text-slate-300">
               Calories
@@ -116,26 +131,30 @@ const AddMealForm = ({ fetchMeals }) => {
 
             <input
               type="number"
+              min="0"
               name="calories"
               value={formData.calories}
               onChange={handleChange}
               placeholder="Calories"
               required
               className="
-              w-full
-              rounded-xl
-              border border-slate-700
-              bg-slate-950/50
-              px-4 py-3
-              text-white
-              placeholder:text-slate-500
-              outline-none
-              transition-all
-              focus:border-cyan-500
-            "
+          w-full
+          rounded-2xl
+          border border-slate-700
+          bg-slate-950/50
+          px-4 py-3
+          text-white
+          placeholder:text-slate-500
+          outline-none
+          transition-all duration-200
+          hover:border-cyan-400
+          focus:border-cyan-500
+          focus:ring-2 focus:ring-cyan-500/20
+        "
             />
           </div>
 
+          {/* Protein */}
           <div>
             <label className="mb-2 block text-sm font-medium text-slate-300">
               Protein (g)
@@ -143,25 +162,29 @@ const AddMealForm = ({ fetchMeals }) => {
 
             <input
               type="number"
+              min="0"
               name="protein"
               value={formData.protein}
               onChange={handleChange}
               placeholder="Protein"
               className="
-              w-full
-              rounded-xl
-              border border-slate-700
-              bg-slate-950/50
-              px-4 py-3
-              text-white
-              placeholder:text-slate-500
-              outline-none
-              transition-all
-              focus:border-cyan-500
-            "
+          w-full
+          rounded-2xl
+          border border-slate-700
+          bg-slate-950/50
+          px-4 py-3
+          text-white
+          placeholder:text-slate-500
+          outline-none
+          transition-all duration-200
+          hover:border-cyan-400
+          focus:border-cyan-500
+          focus:ring-2 focus:ring-cyan-500/20
+        "
             />
           </div>
 
+          {/* Carbs */}
           <div>
             <label className="mb-2 block text-sm font-medium text-slate-300">
               Carbs (g)
@@ -169,25 +192,29 @@ const AddMealForm = ({ fetchMeals }) => {
 
             <input
               type="number"
+              min="0"
               name="carbs"
               value={formData.carbs}
               onChange={handleChange}
               placeholder="Carbs"
               className="
-              w-full
-              rounded-xl
-              border border-slate-700
-              bg-slate-950/50
-              px-4 py-3
-              text-white
-              placeholder:text-slate-500
-              outline-none
-              transition-all
-              focus:border-cyan-500
-            "
+          w-full
+          rounded-2xl
+          border border-slate-700
+          bg-slate-950/50
+          px-4 py-3
+          text-white
+          placeholder:text-slate-500
+          outline-none
+          transition-all duration-200
+          hover:border-cyan-400
+          focus:border-cyan-500
+          focus:ring-2 focus:ring-cyan-500/20
+        "
             />
           </div>
 
+          {/* Fat */}
           <div>
             <label className="mb-2 block text-sm font-medium text-slate-300">
               Fat (g)
@@ -195,22 +222,25 @@ const AddMealForm = ({ fetchMeals }) => {
 
             <input
               type="number"
+              min="0"
               name="fat"
               value={formData.fat}
               onChange={handleChange}
               placeholder="Fat"
               className="
-              w-full
-              rounded-xl
-              border border-slate-700
-              bg-slate-950/50
-              px-4 py-3
-              text-white
-              placeholder:text-slate-500
-              outline-none
-              transition-all
-              focus:border-cyan-500
-            "
+          w-full
+          rounded-2xl
+          border border-slate-700
+          bg-slate-950/50
+          px-4 py-3
+          text-white
+          placeholder:text-slate-500
+          outline-none
+          transition-all duration-200
+          hover:border-cyan-400
+          focus:border-cyan-500
+          focus:ring-2 focus:ring-cyan-500/20
+        "
             />
           </div>
         </div>
@@ -218,17 +248,17 @@ const AddMealForm = ({ fetchMeals }) => {
         <button
           type="submit"
           className="
-          w-full
-          rounded-xl
-          bg-cyan-500
-          px-6 py-3
-          font-semibold
-          text-slate-950
-          transition-all
-          hover:bg-cyan-400
-          hover:shadow-lg
-          hover:shadow-cyan-500/20
-        "
+      w-full
+      rounded-2xl
+      bg-cyan-500
+      px-6 py-3
+      font-semibold
+      text-slate-950
+      transition-all duration-200
+      hover:bg-cyan-400
+      hover:shadow-lg
+      hover:shadow-cyan-500/20
+    "
         >
           Add Meal
         </button>
